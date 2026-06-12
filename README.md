@@ -11,8 +11,7 @@ your due date.
 - The toolbar badge counts down the days to your next close
 - A notification fires 3 days before each card closes — enough time for a payment to post
 
-**Status:** submitted to the Chrome Web Store, review pending. Until it's listed you can
-load it unpacked (below).
+**[➜ Install from the Chrome Web Store](https://chromewebstore.google.com/detail/mhpbmoikiffjdfmbbfnbgdehpoanpboi)**
 
 Pairs with **[ReportsLow](https://ababa1326.github.io/reportslow/)** — the free calculator
 that tells you exactly how much to pay down before the snapshot.
