@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="440" height="280" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="440" height="280" fill="#faf7f2"/>
+  <rect width="440" height="6" fill="#1f6b4f"/>
+
+  <!-- icon with badge -->
+  <g transform="translate(40,52)">
+    <rect width="72" height="72" rx="16" fill="#1f6b4f"/>
+    <path d="M36 18 v24 M36 42 l-10 -10 M36 42 l10 -10" fill="none" stroke="#faf7f2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="40" y="44" width="38" height="26" rx="8" fill="#c4622d"/>
+    <text x="59" y="63" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-monospace, Menlo, monospace">3</text>
+  </g>
+
+  <text x="136" y="84" font-size="26" font-weight="700" fill="#14110f" letter-spacing="-0.5">Statement</text>
+  <text x="136" y="114" font-size="26" font-weight="700" fill="#1f6b4f" letter-spacing="-0.5">Reminder</text>
+
+  <text x="40" y="182" font-size="17" fill="#4a443c">Your card reports its balance when the</text>
+  <text x="40" y="206" font-size="17" fill="#4a443c">statement closes — not when you pay.</text>
+  <text x="40" y="240" font-size="16" font-weight="650" fill="#1f6b4f">Get a heads-up 3 days before.</text>
+</svg>
