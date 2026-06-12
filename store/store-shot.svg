@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1280" height="800" fill="#faf7f2"/>
+  <rect width="1280" height="10" fill="#1f6b4f"/>
+
+  <!-- left: value prop -->
+  <g transform="translate(80,120)">
+    <g>
+      <rect width="46" height="46" rx="10" fill="#1f6b4f"/>
+      <path d="M23 11 v17 M23 28 l-7 -7 M23 28 l7 -7" fill="none" stroke="#faf7f2" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="62" y="32" font-size="22" letter-spacing="3" font-family="ui-monospace, 'Cascadia Code', Menlo, monospace" fill="#8a7f72" font-weight="600">STATEMENT<tspan fill="#14110f">REMINDER</tspan></text>
+    </g>
+
+    <text x="0" y="140" font-size="58" font-weight="700" fill="#14110f" letter-spacing="-1">Never miss a</text>
+    <text x="0" y="206" font-size="58" font-weight="700" letter-spacing="-1"><tspan fill="#1f6b4f">closing date</tspan><tspan fill="#14110f"> again.</tspan></text>
+
+    <text x="0" y="270" font-size="25" fill="#4a443c">Your card reports whatever balance it shows when the</text>
+    <text x="0" y="304" font-size="25" fill="#4a443c">statement closes — not when you pay your bill.</text>
+
+    <g transform="translate(0,360)" font-size="22" fill="#383229">
+      <circle cx="10" cy="-7" r="5" fill="#1f6b4f"/>
+      <text x="30" y="0">Badge counts down to your next closing date</text>
+      <circle cx="10" cy="43" r="5" fill="#1f6b4f"/>
+      <text x="30" y="50">Heads-up notification 3 days before each card closes</text>
+      <circle cx="10" cy="93" r="5" fill="#1f6b4f"/>
+      <text x="30" y="100">All data stays in your browser — nothing to sign up for</text>
+    </g>
+  </g>
+
+  <!-- right: popup mockup -->
+  <g transform="translate(760,120)">
+    <rect width="420" height="560" rx="18" fill="#ffffff" stroke="#e6ddd0" stroke-width="2"/>
+    <g transform="translate(28,40)">
+      <circle cx="6" cy="-5" r="5" fill="#1f6b4f"/>
+      <text x="22" y="0" font-size="17" letter-spacing="2.5" font-family="ui-monospace, 'Cascadia Code', Menlo, monospace" fill="#8a7f72" font-weight="600">STATEMENT<tspan fill="#14110f">REMINDER</tspan></text>
+    </g>
+    <line x1="28" y1="62" x2="392" y2="62" stroke="#e6ddd0" stroke-width="2"/>
+
+    <!-- card row 1 -->
+    <g transform="translate(28,86)">
+      <rect width="364" height="86" rx="12" fill="#ffffff" stroke="#e6ddd0" stroke-width="2"/>
+      <text x="22" y="38" font-size="21" font-weight="650" fill="#14110f">Chase Sapphire</text>
+      <text x="22" y="64" font-size="16" fill="#8a7f72">closes the 25th</text>
+      <rect x="272" y="26" width="62" height="34" rx="8" fill="#e3efe8"/>
+      <text x="303" y="49" font-size="17" font-weight="650" font-family="ui-monospace, Menlo, monospace" fill="#1f6b4f" text-anchor="middle">14d</text>
+    </g>
+
+    <!-- card row 2 (soon) -->
+    <g transform="translate(28,186)">
+      <rect width="364" height="86" rx="12" fill="#ffffff" stroke="#e6ddd0" stroke-width="2"/>
+      <text x="22" y="38" font-size="21" font-weight="650" fill="#14110f">Amex Blue Cash</text>
+      <text x="22" y="64" font-size="16" fill="#8a7f72">closes the 14th</text>
+      <rect x="272" y="26" width="62" height="34" rx="8" fill="#f6e6db"/>
+      <text x="303" y="49" font-size="17" font-weight="650" font-family="ui-monospace, Menlo, monospace" fill="#c4622d" text-anchor="middle">3d</text>
+    </g>
+
+    <!-- card row 3 -->
+    <g transform="translate(28,286)">
+      <rect width="364" height="86" rx="12" fill="#ffffff" stroke="#e6ddd0" stroke-width="2"/>
+      <text x="22" y="38" font-size="21" font-weight="650" fill="#14110f">Discover It</text>
+      <text x="22" y="64" font-size="16" fill="#8a7f72">closes the 3rd</text>
+      <rect x="272" y="26" width="62" height="34" rx="8" fill="#e3efe8"/>
+      <text x="303" y="49" font-size="17" font-weight="650" font-family="ui-monospace, Menlo, monospace" fill="#1f6b4f" text-anchor="middle">22d</text>
+    </g>
+
+    <!-- add form mock -->
+    <g transform="translate(28,400)">
+      <rect width="170" height="44" rx="9" fill="#ffffff" stroke="#e6ddd0" stroke-width="2"/>
+      <text x="16" y="28" font-size="16" fill="#cabfae">Card name</text>
+      <rect x="182" y="0" width="104" height="44" rx="9" fill="#ffffff" stroke="#e6ddd0" stroke-width="2"/>
+      <text x="198" y="28" font-size="16" fill="#cabfae">Closing</text>
+      <rect x="298" y="0" width="66" height="44" rx="9" fill="#1f6b4f"/>
+      <text x="331" y="28" font-size="17" font-weight="650" fill="#ffffff" text-anchor="middle">Add</text>
+    </g>
+
+    <line x1="28" y1="478" x2="392" y2="478" stroke="#e6ddd0" stroke-width="2"/>
+    <text x="28" y="510" font-size="14.5" fill="#8a7f72">Pay down BEFORE the closing date — that's the</text>
+    <text x="28" y="530" font-size="14.5" fill="#8a7f72">balance the bureaus see.</text>
+  </g>
+
+  <!-- badge motif floating above mockup -->
+  <g transform="translate(1108,84)">
+    <rect width="64" height="64" rx="14" fill="#1f6b4f"/>
+    <path d="M32 16 v22 M32 38 l-9 -9 M32 38 l9 -9" fill="none" stroke="#faf7f2" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="34" y="38" width="34" height="24" rx="7" fill="#c4622d"/>
+    <text x="51" y="55" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-monospace, Menlo, monospace">3</text>
+  </g>
+</svg>
