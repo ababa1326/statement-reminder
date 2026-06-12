@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Statement Reminder</title>
+  <style>
+    :root {
+      --ink: #14110f;
+      --paper: #faf7f2;
+      --line: #e6ddd0;
+      --muted: #8a7f72;
+      --accent: #1f6b4f;
+      --accent-soft: #e3efe8;
+      --warn: #c4622d;
+      --warn-soft: #f6e6db;
+      --mono: "SF Mono", "Roboto Mono", ui-monospace, "Cascadia Code", Menlo, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      width: 340px;
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      padding: 17px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .brand b {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    main { padding: 16px 18px 0; }
+
+    #card-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .card-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      align-items: center;
+      gap: 9px;
+      min-height: 58px;
+      padding: 10px 10px 10px 12px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .card-copy { min-width: 0; }
+
+    .card-name {
+      overflow: hidden;
+      font-weight: 650;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .card-date {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .badge {
+      min-width: 38px;
+      padding: 5px 7px;
+      border-radius: 7px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .badge.soon {
+      background: var(--warn-soft);
+      color: var(--warn);
+    }
+
+    .remove {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .remove:hover,
+    .remove:focus-visible {
+      background: #f3efe7;
+      color: var(--ink);
+      outline: none;
+    }
+
+    .empty {
+      margin: 4px 0 18px;
+      color: #4a443c;
+      font-size: 13px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 92px auto;
+      gap: 7px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    input,
+    button {
+      font: inherit;
+    }
+
+    input {
+      min-width: 0;
+      height: 36px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      outline: none;
+    }
+
+    input[type="number"] {
+      font-family: var(--mono);
+    }
+
+    input::placeholder { color: #a99e90; }
+
+    input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-soft);
+    }
+
+    .add {
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .add:hover,
+    .add:focus-visible {
+      background: #185840;
+      outline: none;
+    }
+
+    .error {
+      grid-column: 1 / -1;
+      min-height: 17px;
+      margin: 0;
+      color: var(--warn);
+      font-size: 12px;
+    }
+
+    footer {
+      margin-top: 14px;
+      padding: 13px 18px 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    footer p { margin: 0 0 5px; }
+
+    footer a {
+      color: var(--accent);
+      font-family: var(--mono);
+      text-decoration: none;
+    }
+
+    footer a:hover,
+    footer a:focus-visible {
+      text-decoration: underline;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="dot"></span>Statement<b>Reminder</b></div>
+  </header>
+
+  <main>
+    <div id="card-list" aria-live="polite"></div>
+    <p id="empty-state" class="empty">Add a card's closing day to get a heads-up before its balance reports.</p>
+
+    <form id="add-form" novalidate>
+      <input id="card-name" type="text" maxlength="80" placeholder="Card name" aria-label="Card name">
+      <input id="close-day" type="number" min="1" max="31" step="1" placeholder="Closing day" aria-label="Closing day">
+      <button class="add" type="submit">Add</button>
+      <p id="form-error" class="error" role="alert"></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>Pay down BEFORE the closing date — that's the balance the bureaus see.</p>
+    <a href="https://SITE_URL_PLACEHOLDER/" target="_blank" rel="noopener noreferrer">Full calculator → ReportsLow</a>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
